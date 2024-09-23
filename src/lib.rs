@@ -6,3 +6,4 @@ pub mod m5_traits;
 pub mod m6_generic;
 pub mod m7_macros;
 pub mod m8_lifetime;
+pub mod m9_other;

@@ -147,3 +147,17 @@ fn main_8() {
     // `name` was moved into `p`, their lifetimes are no longer tied.
 }
 */
+
+// Struct literal assignment shorthand - struct的字面赋值简写
+// when a field is set to a variable binding of the same name:
+// 很奇怪的语法 - 当field名字和变量绑定的名字是一样的时候可以简写 
+fn main_8() {
+    let name = "Ming";
+    let p = Person { name: name };
+    let p = Person { name };
+
+    let full_name = "LiMing";
+    let p = Person { name: full_name };
+    // error: `Person` does not have this field
+    // let p = Person { full_name };
+}

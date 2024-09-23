@@ -84,7 +84,8 @@ Returns the last element of the slice, or None if it is empty.
 fn file_ext(name: &str) -> Option<&str> {
     // this does not create a new string - it returns
     // a slice of the argument. 
-    // 这个解释有误，但效果是一样的。split的数组的生命周期和name是一样的
+    // split 返回的是对原字符串的引用，不会创建新的字符串。
+    // 返回值：返回一个 Split 迭代器，其中包含分割后的子字符串。
     name.split(".").last()
 }
 
